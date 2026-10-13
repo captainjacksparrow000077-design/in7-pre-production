@@ -1,0 +1,105 @@
+/* Google Fonts are loaded via next/font/google in layout.tsx — no CDN import needed here */
+@import "tailwindcss";
+
+:root {
+  --background: #000000;
+  --foreground: #ffffff;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: "Inter", sans-serif;
+  --font-heading: "Playfair Display", serif;
+  
+  --color-brand-red: #D32F2F;
+  --color-brand-red-dark: #B71C1C;
+  --color-brand-red-glow: rgba(211, 47, 47, 0.6);
+  
+  --color-brand-gold: #BF953F;
+  --color-brand-gold-light: #FCF6BA;
+  --color-brand-gold-dark: #B38728;
+  --color-brand-gold-glow: rgba(191, 149, 63, 0.4);
+  
+  --color-dark-800: #0A0A0A;
+  --color-dark-900: #000000;
+
+  --animate-marquee: marquee 25s linear infinite;
+  --animate-pulse-glow: pulse-glow 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  --animate-pulse-gold: pulse-gold 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes marquee {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-50%); } 
+}
+
+@keyframes pulse-glow {
+  0%, 100% { opacity: 1; box-shadow: 0 0 15px var(--color-brand-red-glow); }
+  50% { opacity: 0.8; box-shadow: 0 0 5px var(--color-brand-red-glow); }
+}
+
+@keyframes pulse-gold {
+  0%, 100% { opacity: 1; box-shadow: 0 0 20px var(--color-brand-gold-glow); }
+  50% { opacity: 0.8; box-shadow: 0 0 8px var(--color-brand-gold-glow); }
+}
+
+@keyframes hero-fade-one {
+  0%, 28% { opacity: 1; }
+  34%, 94% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@keyframes hero-fade-two {
+  0%, 28% { opacity: 0; }
+  34%, 61% { opacity: 1; }
+  67%, 100% { opacity: 0; }
+}
+
+@keyframes hero-fade-three {
+  0%, 61% { opacity: 0; }
+  67%, 94% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans), Arial, Helvetica, sans-serif;
+  overflow-x: hidden;
+}
+
+.glass-panel {
+  background: rgba(20, 20, 20, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(212, 175, 55, 0.5); /* Gold tint border /50 */
+}
+
+.glass-nav {
+  background: rgba(10, 10, 10, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(191, 149, 63, 0.2);
+}
+
+/* Custom Text & Bg styles */
+.text-gold-gradient {
+  background: linear-gradient(to right, #BF953F, #FCF6BA, #B38728);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+
+.bg-gold-gradient {
+  background: linear-gradient(135deg, #BF953F 0%, #FCF6BA 50%, #B38728 100%);
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}

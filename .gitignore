@@ -39,3 +39,9 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# seo audit output
+seo-audit-report.json
+
+# generated optimized images (rebuilt by `npm run prebuild`)
+public/optimized/
