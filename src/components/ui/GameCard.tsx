@@ -9,7 +9,7 @@ export interface GameCardProps {
   badge?: 'HOT' | 'NEW' | 'VIP';
 }
 
-export default function GameCard({ id, name, imageUrl, badge }: GameCardProps) {
+export default function GameCard({ name, imageUrl, badge }: GameCardProps) {
   return (
     <div className="group relative rounded-xl overflow-hidden bg-[#09090B] aspect-square border border-brand-gold/10 hover:border-brand-gold/40 hover:shadow-[0_0_20px_rgba(212,175,55,0.2)] transition-all duration-300 hover:-translate-y-1">
       {/* Base Layer: Rich Generative Image */}

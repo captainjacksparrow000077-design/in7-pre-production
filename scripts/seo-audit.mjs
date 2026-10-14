@@ -177,6 +177,65 @@ function checkRobots() {
   }
 }
 
+// Validates the machine-readable discovery files (llms.txt, llms-full.txt,
+// humans.txt) against the prerendered production build: existence, non-empty
+// content, canonical-only internal links, and no preview/insecure URLs.
+function checkDiscoveryFiles(routes) {
+  const allowed = new Set([
+    ...routes,
+    "/sitemap.xml",
+    "/robots.txt",
+    "/llms.txt",
+    "/llms-full.txt",
+    "/humans.txt",
+  ]);
+
+  const files = [
+    ["llms.txt.body", "/llms.txt"],
+    ["llms-full.txt.body", "/llms-full.txt"],
+    ["humans.txt.body", "/humans.txt"],
+  ];
+
+  for (const [file, label] of files) {
+    const path = join(APP_DIR, file);
+    if (!existsSync(path)) {
+      errors.push(`[discovery] ${label} not found — run \`npm run build\` first`);
+      continue;
+    }
+    const txt = readFileSync(path, "utf8");
+    if (txt.trim().length === 0) {
+      errors.push(`[discovery] ${label} is empty`);
+      continue;
+    }
+    if (/http:\/\//i.test(txt)) {
+      errors.push(`[discovery] ${label} contains an insecure http:// URL`);
+    }
+    if (/localhost|vercel\.app/i.test(txt)) {
+      errors.push(`[discovery] ${label} contains a non-production URL`);
+    }
+    if (/\/go(?![a-z0-9])/i.test(txt)) {
+      errors.push(`[discovery] ${label} references the /go affiliate redirect`);
+    }
+    if (file.startsWith("llms")) {
+      if (!txt.startsWith("# ")) {
+        errors.push(`[discovery] ${label} should start with a Markdown H1`);
+      }
+      if (!txt.includes(SITE_URL)) {
+        errors.push(`[discovery] ${label} does not reference the canonical origin`);
+      }
+      const internalLinks = [...txt.matchAll(/\]\((https:\/\/in7india\.in[^)\s]*)\)/g)].map(
+        (m) => m[1],
+      );
+      for (const link of internalLinks) {
+        const route = link.replace(SITE_URL, "") || "/";
+        if (!allowed.has(route)) {
+          errors.push(`[discovery] ${label} links to unknown internal route "${route}"`);
+        }
+      }
+    }
+  }
+}
+
 function main() {
   if (!existsSync(APP_DIR)) {
     console.error(
@@ -193,6 +252,7 @@ function main() {
   checkDuplicates(pages, "description");
   const sitemapResult = checkSitemap(pages.map((p) => p.route));
   checkRobots();
+  checkDiscoveryFiles(pages.map((p) => p.route));
 
   console.log("\n  SEO audit —", pages.length, "prerendered pages");
   console.log("  " + "=".repeat(72));

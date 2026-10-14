@@ -9,19 +9,25 @@ import JsonLd from '@/components/seo/JsonLd';
 import Breadcrumbs from '@/components/seo/Breadcrumbs';
 import { breadcrumbJsonLd, buildMetadata, itemListJsonLd } from '@/lib/seo';
 
-export const metadata: Metadata = buildMetadata({
-  title: 'Casino Lobby: Slots, Live Tables & Aviator',
-  description:
-    'Browse the IN7India casino lobby: slot-style games, live dealer tables, Aviator-style crash games and card games. See game guides before you play.',
-  path: '/lobby',
-  keywords: [
-    'IN7 casino lobby',
-    'IN7 games',
-    'online slots India',
-    'live dealer games',
-    'Aviator game',
-  ],
-});
+const LOBBY_TITLE = 'IN7India Casino Lobby: Slots, Tables & Aviator Games';
+
+export const metadata: Metadata = {
+  ...buildMetadata({
+    title: LOBBY_TITLE,
+    description:
+      'Explore the IN7India game lobby for slots, live tables, Aviator-style games and card games. Browse game details, rules and guides before playing.',
+    path: '/lobby',
+    keywords: [
+      'IN7India',
+      'IN7India casino lobby',
+      'IN7 games',
+      'online slots India',
+      'live dealer games',
+      'Aviator game',
+    ],
+  }),
+  title: { absolute: LOBBY_TITLE },
+};
 
 const breadcrumbs = [
   { name: 'Home', path: '/' },

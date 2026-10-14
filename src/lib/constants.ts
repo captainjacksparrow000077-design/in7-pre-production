@@ -25,9 +25,6 @@ export const SITE_DESCRIPTION =
 export const AFFILIATE_URL =
   "https://share.in7v.com/share/agent/AA60KH07?data=eyJtIjoyLCJsYW5nIjoiZW4iLCJpZCI6MX0=";
 
-// Published support contact shown in the footer and support page.
-export const CONTACT_EMAIL = "support@in7game.com";
-
 // Identifies the organisation that publishes this website.
 export const PUBLISHER_NAME = "IN7India.in";
 
@@ -46,8 +43,8 @@ export const DEFAULT_OG_IMAGE = {
   alt: "IN7India.in — India's Online Casino Game Portal",
 } as const;
 
-// Social profiles referenced in the footer. Kept intentionally limited to the
-// public handles published on the site.
+// Social profiles referenced in Organization structured data. Kept intentionally
+// limited to the public handles published on the site.
 export const SOCIAL_PROFILES = [
   "https://instagram.com/in7game",
   "https://facebook.com/in7game",

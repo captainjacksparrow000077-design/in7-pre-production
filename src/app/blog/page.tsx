@@ -9,9 +9,9 @@ import { buildMetadata, breadcrumbJsonLd } from '@/lib/seo';
 import { getAllPosts, getUsedCategories } from '@/content/blog';
 
 export const metadata = buildMetadata({
-  title: 'Casino Guides, App Safety & Payment Tips',
+  title: 'IN7India Guides: App Safety, Games & Payment Tips',
   description:
-    'Guides for IN7India players: getting started, casino game types, app safety, bonus terms, UPI payments and responsible gaming.',
+    'Explore IN7India guides on getting started, casino game types, app safety, bonus terms, UPI payment considerations and responsible gaming practices.',
   path: '/blog',
   keywords: [
     'IN7 blog',

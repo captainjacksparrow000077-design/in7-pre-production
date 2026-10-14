@@ -13,11 +13,18 @@ import Footer from '@/components/layout/Footer';
 import JsonLd from '@/components/seo/JsonLd';
 import { buildMetadata, faqJsonLd } from '@/lib/seo';
 
-export const metadata: Metadata = buildMetadata({
-  description:
-    'IN7India is a casino referral portal for India. Explore casino games, slots, live tables and Aviator, learn about app safety, and download the IN7 app.',
-  path: '/',
-});
+const HOME_TITLE = 'IN7India: Download IN7 Game APK & Get Bonuses';
+
+export const metadata: Metadata = {
+  ...buildMetadata({
+    title: HOME_TITLE,
+    description:
+      'Visit IN7India for IN7 Game APK download guidance, Android app details, game features, and information about available bonuses and offer terms.',
+    path: '/',
+  }),
+  // Absolute title so the layout's "| SITE_NAME" template is not appended.
+  title: { absolute: HOME_TITLE },
+};
 
 // FAQPage structured data. Content mirrors the visible FAQ section rendered by
 // <FAQ /> so the schema matches what a reader — and a crawler — can see.

@@ -1,4 +1,3 @@
-'use client';
 import Link from 'next/link';
 import GameCard from '@/components/ui/GameCard';
 

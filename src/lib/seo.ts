@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 
 import {
-  CONTACT_EMAIL,
   DEFAULT_OG_IMAGE,
   LOGO_PATH,
   PUBLISHER_NAME,
@@ -73,6 +72,10 @@ const DEFAULT_ROBOTS: Metadata["robots"] = {
   },
 };
 
+// Preview/staging deployments (Vercel) must never be indexed. This mirrors the
+// X-Robots-Tag header set in next.config.ts and the robots.txt rule.
+const IS_PREVIEW = process.env.VERCEL_ENV === "preview";
+
 /**
  * Produce a complete, consistent Metadata object for an indexable page.
  * Canonical URL is always derived from `path` against the configured origin.
@@ -118,7 +121,7 @@ export function buildMetadata(input: BuildMetadataInput): Metadata {
     description: input.description,
     keywords: input.keywords,
     alternates: { canonical: url },
-    robots: input.robots ?? DEFAULT_ROBOTS,
+    robots: IS_PREVIEW ? { index: false, follow: false } : input.robots ?? DEFAULT_ROBOTS,
     openGraph,
     twitter: {
       card: "summary_large_image",
@@ -149,13 +152,6 @@ export function organizationJsonLd() {
     logo: absoluteUrl(LOGO_PATH),
     description: SITE_DESCRIPTION,
     sameAs: [...SOCIAL_PROFILES],
-    contactPoint: [
-      {
-        "@type": "ContactPoint",
-        contactType: "customer support",
-        email: CONTACT_EMAIL,
-      },
-    ],
   };
 }
 

@@ -9,9 +9,9 @@ import Breadcrumbs from '@/components/seo/Breadcrumbs';
 import { breadcrumbJsonLd, buildMetadata } from '@/lib/seo';
 
 export const metadata: Metadata = buildMetadata({
-  title: 'Promotions & Bonus Terms Explained',
+  title: 'IN7India Promotions: Bonuses, Offers & Terms',
   description:
-    'See current IN7India promotions, including the first deposit bonus shown on this site. Availability, eligibility and terms are set by the operator.',
+    'Explore IN7India promotions, deposit bonus details and offer terms. Check eligibility, availability, wagering requirements and restrictions before participating.',
   path: '/promotions',
   keywords: [
     'IN7 promotions',

@@ -62,11 +62,7 @@ export default function PrivacyPage() {
             <section>
               <h2 className="text-lg font-bold text-white mb-2">6. Contact</h2>
               <p>
-                For privacy-related enquiries, contact us at{' '}
-                <a href="mailto:support@in7game.com" className="text-brand-gold hover:underline">
-                  support@in7game.com
-                </a>
-                .
+                For privacy-related enquiries, use the support channels listed on the platform&apos;s verified website.
               </p>
             </section>
           </div>

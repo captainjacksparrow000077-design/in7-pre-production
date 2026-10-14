@@ -4,7 +4,7 @@ import Footer from '@/components/layout/Footer';
 import JsonLd from '@/components/seo/JsonLd';
 import Breadcrumbs from '@/components/seo/Breadcrumbs';
 import { breadcrumbJsonLd, buildMetadata, faqJsonLd } from '@/lib/seo';
-import { Mail, MessageCircle, FileText, HelpCircle } from 'lucide-react';
+import { MessageCircle, FileText, HelpCircle } from 'lucide-react';
 import Link from 'next/link';
 
 export const metadata: Metadata = buildMetadata({
@@ -21,14 +21,6 @@ const breadcrumbs = [
 ];
 
 const supportOptions = [
-  {
-    icon: Mail,
-    title: 'Email Support',
-    description: 'Send us an email and we will respond as quickly as possible.',
-    action: 'support@in7game.com',
-    href: 'mailto:support@in7game.com',
-    label: 'Send email',
-  },
   {
     icon: MessageCircle,
     title: 'Live Chat',
@@ -76,7 +68,7 @@ const supportFaqs = [
   {
     question: 'How do I contact IN7 support?',
     answer:
-      'Account and payment issues are handled by the operator through its in-app live chat. You can also reach this portal by email at support@in7game.com for questions about the information on this site.',
+      'Account and payment issues are handled by the operator through its in-app live chat. For questions about the information on this site, use the support channels listed on the platform\u2019s verified website.',
   },
   {
     question: 'I forgot my password. What should I do?',

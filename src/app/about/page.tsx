@@ -8,9 +8,9 @@ import Link from 'next/link';
 import { ShieldCheck, Gamepad2, Users, FileText } from 'lucide-react';
 
 export const metadata: Metadata = buildMetadata({
-  title: 'About Us: Referral Portal & Editorial Policy',
+  title: 'About IN7India: Our Mission & Editorial Policy',
   description:
-    'IN7India is a marketing and referral portal for the IN7 casino platform. Learn how the site works, our editorial approach and our affiliate disclosure.',
+    'Learn how IN7India works, how our content is created, and how referral links may support our site. Read our editorial policy and affiliate disclosure.',
   path: '/about',
   keywords: ['IN7India', 'IN7 referral portal', 'about IN7', 'affiliate disclosure'],
 });
@@ -45,29 +45,54 @@ const sections = [
 
 const aboutFaqs = [
   {
-    question: 'What is IN7India?',
+    question: 'How can I download IN7 Game APK for Android?',
     answer:
-      'IN7India is a marketing and referral website that provides information about the IN7 online casino platform, including game guides, app safety guidance and promotional details. It is not the casino operator itself.',
+      'Visit the relevant download information page on IN7India and follow the available instructions. Verify the APK source before installing it on your device.',
   },
   {
-    question: 'Does IN7India operate the games or handle payments?',
+    question: 'How do I log in to IN7 Game?',
     answer:
-      'No. This site does not operate games, take deposits, process withdrawals or manage player accounts. Registration, gameplay and payments are handled entirely by the third-party operator that you are referred to.',
+      'Use the login method provided by the platform. Enter your registered credentials only on a verified website, and never share your password or OTP with anyone.',
   },
   {
-    question: 'How does IN7India make money?',
+    question: 'How can I register on IN7 Game?',
     answer:
-      'The site earns referral commissions when visitors register on the IN7 platform through its links. This is disclosed openly so visitors understand the commercial relationship.',
+      'Check the platform\u2019s registration instructions and eligibility requirements. Use accurate information and review the applicable terms before creating an account.',
   },
   {
-    question: 'How is content on this site created?',
+    question: 'Is IN7 Game available on the Google Play Store?',
     answer:
-      'Content is written and maintained by the IN7India editorial team. We avoid fabricating reviews, ratings or licensing claims, and we tell visitors when details such as bonuses or game availability can change.',
+      'Check the Google Play Store for a verified listing. If no verified listing is available, be cautious with third-party APK download websites.',
   },
   {
-    question: 'Is IN7India an official operator site?',
+    question: 'How can I claim an IN7 Game welcome bonus?',
     answer:
-      'No. IN7India is an independent information and referral portal. It does not claim to be the operator and directs visitors to the official platform for account and payment matters.',
+      'Review the current promotion\u2019s eligibility, activation steps, expiry date and wagering requirements. Bonus availability and conditions may vary.',
+  },
+  {
+    question: 'What are the IN7 Game withdrawal rules?',
+    answer:
+      'Check the platform\u2019s current withdrawal policy for minimum limits, verification requirements, fees and processing times before making a transaction.',
+  },
+  {
+    question: 'Is IN7 Game safe to install?',
+    answer:
+      'Safety cannot be confirmed without verifying the app\u2019s source and permissions. Review the download source, requested permissions and privacy policy before installation.',
+  },
+  {
+    question: 'Why is IN7 Game not working on my phone?',
+    answer:
+      'Check your internet connection, device compatibility and app version. Avoid downloading replacement APK files from unverified websites.',
+  },
+  {
+    question: 'How can I contact IN7 Game customer support?',
+    answer:
+      'Use the support channels listed on the platform\u2019s verified website. Avoid sharing passwords, OTPs or sensitive financial information through unofficial channels.',
+  },
+  {
+    question: 'Is IN7 Game available in my state?',
+    answer:
+      'Availability depends on applicable local laws and the platform\u2019s eligibility rules. Check current official terms and local legal requirements before participating.',
   },
 ];
 
@@ -191,7 +216,6 @@ export default function AboutPage() {
           <div className="text-center text-xs text-gray-600 border-t border-white/10 pt-6 flex flex-wrap gap-4 justify-center">
             <Link href="/terms" className="text-gray-500 hover:text-white transition-colors">Terms of Service</Link>
             <Link href="/privacy" className="text-gray-500 hover:text-white transition-colors">Privacy Policy</Link>
-            <a href="mailto:support@in7game.com" className="text-gray-500 hover:text-white transition-colors">support@in7game.com</a>
           </div>
 
         </div>

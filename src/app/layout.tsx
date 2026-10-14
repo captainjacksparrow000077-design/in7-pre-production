@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Inter, Playfair_Display } from 'next/font/google';
 import "./globals.css";
 import {
@@ -14,6 +14,9 @@ import {
 } from "@/lib/seo";
 
 const defaultTitle = "IN7India — Online Casino Game Portal & App Guide";
+
+// Preview/staging deployments (Vercel) must never be indexed.
+const IS_PREVIEW = process.env.VERCEL_ENV === "preview";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -37,17 +40,19 @@ export const metadata: Metadata = {
   authors: [{ name: PUBLISHER_NAME, url: SITE_URL }],
   creator: PUBLISHER_NAME,
   publisher: PUBLISHER_NAME,
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      "max-video-preview": -1,
-      "max-image-preview": "large",
-      "max-snippet": -1,
-    },
-  },
+  robots: IS_PREVIEW
+    ? { index: false, follow: false }
+    : {
+        index: true,
+        follow: true,
+        googleBot: {
+          index: true,
+          follow: true,
+          "max-video-preview": -1,
+          "max-image-preview": "large",
+          "max-snippet": -1,
+        },
+      },
   openGraph: {
     title: defaultTitle,
     description: SITE_DESCRIPTION,
@@ -82,6 +87,11 @@ const inter = Inter({
   variable: "--font-inter",
   display: "swap",
 });
+
+export const viewport: Viewport = {
+  themeColor: "#0A0A0A",
+  colorScheme: "dark",
+};
 
 const playfair = Playfair_Display({
   subsets: ["latin"],
