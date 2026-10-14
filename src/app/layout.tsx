@@ -1,4 +1,5 @@
 import type { Metadata, Viewport } from "next";
+import Script from "next/script";
 import { Inter, Playfair_Display } from 'next/font/google';
 import "./globals.css";
 import {
@@ -40,6 +41,9 @@ export const metadata: Metadata = {
   authors: [{ name: PUBLISHER_NAME, url: SITE_URL }],
   creator: PUBLISHER_NAME,
   publisher: PUBLISHER_NAME,
+  verification: {
+    google: "w_NQSFLDDEO_oTMD-vnA_bZRFDcp5F4erTokq2L2uSE",
+  },
   robots: IS_PREVIEW
     ? { index: false, follow: false }
     : {
@@ -118,6 +122,24 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       </head>
       <body className="font-sans bg-[#0A0A0A] text-white antialiased min-h-full flex flex-col pb-20 md:pb-0 overflow-x-hidden">
         {children}
+        {/* Google Analytics (gtag.js). Skipped on preview deployments so
+            staging traffic never pollutes production analytics. */}
+        {!IS_PREVIEW && (
+          <>
+            <Script
+              id="ga-gtag-lib"
+              async
+              src="https://www.googletagmanager.com/gtag/js?id=G-3R0LS0PCQS"
+              strategy="afterInteractive"
+            />
+            <Script id="ga-gtag-config" strategy="afterInteractive">
+              {`window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-3R0LS0PCQS');`}
+            </Script>
+          </>
+        )}
       </body>
     </html>
   );
