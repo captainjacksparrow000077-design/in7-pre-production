@@ -43,7 +43,6 @@ export const metadata: Metadata = {
   publisher: PUBLISHER_NAME,
   verification: {
     google: "w_NQSFLDDEO_oTMD-vnA_bZRFDcp5F4erTokq2L2uSE",
-    google: "nLiRlqklFiTKTdZk1jvfF5GIVK0mNgG5vb-06rPMp30",
   },
   robots: IS_PREVIEW
     ? { index: false, follow: false }
