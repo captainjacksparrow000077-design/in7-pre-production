@@ -110,6 +110,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       className={`${inter.variable} ${playfair.variable}`}
     >
       <head>
+        <meta name="google-site-verification" content="nLiRlqklFiTKTdZk1jvfF5GIVK0mNgG5vb-06rPMp30" />
+
         {/* Organization & WebSite structured data (single source in lib/seo) */}
         <script
           type="application/ld+json"
