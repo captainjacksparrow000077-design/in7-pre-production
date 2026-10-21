@@ -111,7 +111,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     >
       <head>
         <meta name="google-site-verification" content="nLiRlqklFiTKTdZk1jvfF5GIVK0mNgG5vb-06rPMp30" />
-
+        <meta name="google-site-verification" content="K6Sb1WO-rEvNAJe1UEtjf0E-95gbe_5i4L9bWznGx18" />
         {/* Organization & WebSite structured data (single source in lib/seo) */}
         <script
           type="application/ld+json"
