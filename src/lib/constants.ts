@@ -10,7 +10,7 @@
 // Never derive canonical URLs from request host headers.
 // ---------------------------------------------------------------------------
 
-export const SITE_URL = "https://in7india.online";
+export const SITE_URL = "https://www.in7india.online";
 
 export const SITE_NAME = "IN7India";
 
