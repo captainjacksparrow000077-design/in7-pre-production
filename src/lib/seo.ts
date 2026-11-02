@@ -43,7 +43,7 @@ export interface BuildMetadataInput {
   /**
    * Unique, descriptive base <title>. Omit it on the homepage so the layout's
    * `title.default` (an absolute, branded title) applies. When provided, the
-   * layout `title.template` appends " | IN7India.in" automatically.
+   * layout `title.template` appends " | IN7India" automatically.
    */
   title?: string;
   /** Unique meta description for the page. */

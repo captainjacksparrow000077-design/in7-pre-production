@@ -10,8 +10,8 @@
 //   npm run build && npm run start          # in one terminal
 //   npm run verify:discovery                # in another (defaults to :3000)
 //
-//   npm run verify:discovery -- https://in7india.in
-//   BASE_URL=https://in7india.in npm run verify:discovery
+//   npm run verify:discovery -- https://in7india.online
+//   BASE_URL=https://in7india.online npm run verify:discovery
 // ---------------------------------------------------------------------------
 
 const baseUrl = (

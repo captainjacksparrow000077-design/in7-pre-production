@@ -96,7 +96,7 @@ const post: BlogPost = {
     {
       question: "Does this portal handle my payment?",
       answer:
-        "No. IN7India.in is a referral portal and does not process deposits or withdrawals. All payment handling is done by the third-party operator.",
+        "No. IN7India is a referral portal and does not process deposits or withdrawals. All payment handling is done by the third-party operator.",
     },
   ],
   sources: [

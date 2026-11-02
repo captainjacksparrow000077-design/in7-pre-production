@@ -15,7 +15,7 @@ import { join, relative, sep } from "node:path";
 
 const ROOT = process.cwd();
 const APP_DIR = join(ROOT, ".next", "server", "app");
-const SITE_URL = "https://in7india.in";
+const SITE_URL = "https://in7india.online";
 
 const TITLE_MIN = 30;
 const TITLE_MAX = 65;

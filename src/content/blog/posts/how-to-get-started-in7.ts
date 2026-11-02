@@ -21,7 +21,7 @@ const post: BlogPost = {
   },
   intro: [
     "IN7 is an online casino gaming platform available in India through a dedicated Android app. If you are new, this guide explains the basic steps to get started — and what to keep in mind before you do.",
-    "IN7India.in is a referral portal: we point you to the operator's official platform, where registration, deposits, gameplay, and support all happen.",
+    "IN7India is a referral portal: we point you to the operator's official platform, where registration, deposits, gameplay, and support all happen.",
   ],
   sections: [
     {

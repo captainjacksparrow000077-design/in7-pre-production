@@ -39,7 +39,7 @@ const CORE_PAGES: PageEntry[] = [
     title: "Home",
     path: "/",
     description:
-      "Starting point: what IN7India.in is, IN7 app download guidance, and an overview of what the site covers.",
+      "Starting point: what IN7India is, IN7 app download guidance, and an overview of what the site covers.",
   },
   {
     title: "Casino Lobby",
@@ -114,7 +114,7 @@ export function buildLlmsTxt(): string {
   lines.push(`> ${INTRO_SUMMARY}`);
   lines.push("");
   lines.push(
-    "IN7India.in publishes independent guides and information about the IN7 online casino platform: game types, app safety, bonus terms and payment considerations. It is a referral site, not the operator.",
+    "IN7India publishes independent guides and information about the IN7 online casino platform: game types, app safety, bonus terms and payment considerations. It is a referral site, not the operator.",
   );
   lines.push("");
   lines.push("## Key facts");

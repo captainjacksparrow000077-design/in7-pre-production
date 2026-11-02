@@ -20,7 +20,7 @@ const post: BlogPost = {
     height: 768,
   },
   intro: [
-    "The IN7 app is the mobile front door to the IN7 casino platform. On this website, IN7India.in, we do not host the app, run the games, or process payments — we are a marketing and referral portal. Any download link here points to the third-party operator that actually provides the software.",
+    "The IN7 app is the mobile front door to the IN7 casino platform. On this website, IN7India, we do not host the app, run the games, or process payments — we are a marketing and referral portal. Any download link here points to the third-party operator that actually provides the software.",
     "This guide explains what you can reasonably check before installing: what the app is in the context of this portal, how to confirm device compatibility, where to obtain it, and which permissions and safety signals are worth reviewing first.",
   ],
   sections: [
@@ -28,7 +28,7 @@ const post: BlogPost = {
       heading: "What the IN7 app is (and what this site is)",
       paragraphs: [
         "The IN7 app is an Android application distributed by the third-party IN7 casino operator. It provides access to the operator's catalogue of casino-style games, account features, and payment options. The exact feature set is controlled by the operator and can change without notice.",
-        "IN7India.in is a referral and information website. When you tap a \"Download APK\" or \"Play Now\" button here, you are redirected to the operator's official platform. Registration, deposits, withdrawals, gameplay, and support all take place there — not on this site.",
+        "IN7India is a referral and information website. When you tap a \"Download APK\" or \"Play Now\" button here, you are redirected to the operator's official platform. Registration, deposits, withdrawals, gameplay, and support all take place there — not on this site.",
       ],
       bullets: [
         "This portal does not collect deposits or hold player funds.",
